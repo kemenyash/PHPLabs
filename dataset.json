@@ -1,0 +1,30 @@
+[
+    {
+        "code": 1,
+        "owner": "Daniel Derkachs",
+        "brand": "Jeep",
+        "license_plate": "AO1234BB",
+        "color": "Black"
+    },
+    {
+        "code": 2,
+        "owner": "Vasyl Kondratenko",
+        "brand": "Ford",
+        "license_plate": "AO5678CC",
+        "color": "White"
+    },
+    {
+        "code": 3,
+        "owner": "Mariya Ionova",
+        "brand": "Chrysler",
+        "license_plate": "AO9876DD",
+        "color": "Green"
+    },
+    {
+        "code": 4,
+        "owner": "Mykhalina Shevchenko",
+        "brand": "Buick",
+        "license_plate": "BC4567EE",
+        "color": "Red"
+    }
+]

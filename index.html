@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Registry</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit-icons.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="uk-background-primary uk-light uk-padding-small">
+        <div class="uk-container uk-flex uk-flex-between uk-flex-middle">
+            <h3 class="uk-margin-remove">Cars Registry</h3>
+            <a class="uk-button uk-button-default" href="#" uk-toggle="target: #add-car-modal">Add New Car</a>
+        </div>
+    </header>
+
+    <div class="uk-container uk-margin-large-top">
+        <table class="uk-table uk-table-justify uk-table-divider uk-width-1-1 uk-margin-top">
+            <thead>
+                <tr>
+                    <th class="uk-width-small">Code</th>
+                    <th>Owner</th>
+                    <th>Brand</th>
+                    <th>License Plate</th>
+                    <th>Color</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table with data set -->
+            </tbody>
+        </table>
+
+        <!-- Editing car modal window -->
+        <div id="edit-modal" class="uk-modal" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-text-center">Edit Car</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="modal-alert-container" style="display:none;"></div>
+                    <form class="uk-form-stacked">
+                        <div class="uk-margin">
+                            <input class="uk-input" id="editCode" type="text" placeholder="Code" aria-label="Input" hidden readonly>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="40" class="uk-input" id="editOwner" type="text" placeholder="Owner" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="40" class="uk-input" id="editBrand" type="text" placeholder="Brand" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="8" class="uk-input" id="editLicensePlate" type="text" placeholder="License Plate" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="40" class="uk-input" id="editColor" type="text" placeholder="Color" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-default">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adding car modal window -->
+        <div id="add-car-modal" class="uk-modal" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-text-center">Add New Car</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="modal-alert-container" style="display:none;"></div>
+                    <form class="uk-form-stacked">
+                        <div class="uk-margin">
+                            <input maxlength="40" id="addOwner" class="uk-input" type="text" placeholder="Owner" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="40" id="addBrand" class="uk-input" type="text" placeholder="Brand" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="8" id="addLicensePlate" class="uk-input" type="text" placeholder="License Plate" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <input maxlength="40" id="addColor" class="uk-input" type="text" placeholder="Color" aria-label="Input" required>
+                        </div>
+                        <div class="uk-margin">
+                            <button class="uk-button uk-button-default">Add Car</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-alert-container" style="display:none; margin-top: 20px;"></div>
+    </div>
+</body>
+</html>
